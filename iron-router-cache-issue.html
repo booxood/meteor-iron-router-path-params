@@ -1,0 +1,33 @@
+<head>
+  <title>iron-router-cache-issue</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  <a href="/"> home </a>
+  <br>
+  <a href="/p1/1"> p1 </a>
+  <br>
+  <a href="/p2/1"> p2 </a>
+</body>
+
+<template name="home">
+
+</template>
+
+<template name="p1">
+  <h2> p1 </h2>
+  {{#with post}}
+      {{title}} {{content}}
+  {{/with}}
+</template>
+
+<template name="p2">
+  <h2> p2 </h2>
+  {{#with post}}
+      {{title}} {{content}}
+  {{/with}}
+</template>
+
+<template name="loading">
+</template>
