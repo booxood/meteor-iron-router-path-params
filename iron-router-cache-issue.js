@@ -50,6 +50,7 @@ if (Meteor.isClient) {
   Template.p1.helpers({
     post: function(){
       var post = Posts.findOne({id: location.pathname.replace(/\/p1\//g, '')});
+      // var post = Posts.findOne({id: Router.current().params['id']});
       // var post = Posts.findOne({id: Session.get('id')});
       console.log('p1 post:', post);
       return post;
@@ -59,6 +60,7 @@ if (Meteor.isClient) {
   Template.p2.helpers({
     post: function(){
       var post = Posts.findOne({id: location.pathname.replace(/\/p2\//g, '')});
+      // var post = Posts.findOne({id: Router.current().params['id']});
       // var post = Posts.findOne({id: Session.get('id')});
       console.log('p2 post:', post);
       return post;
