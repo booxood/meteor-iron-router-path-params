@@ -12,6 +12,7 @@ Router.map(function(){
     action: function(){
         if(this.ready()){
             console.log('p1-3')
+            // Session.set('id', this.params.id);
             this.render();
         }else{
             console.log('p1-2')
@@ -30,6 +31,7 @@ Router.map(function(){
     action: function(){
         if(this.ready()){
             console.log('p2-3')
+            // Session.set('id', this.params.id);
             this.render();
         }else{
             console.log('p2-2')
@@ -48,6 +50,7 @@ if (Meteor.isClient) {
   Template.p1.helpers({
     post: function(){
       var post = Posts.findOne({id: location.pathname.replace(/\/p1\//g, '')});
+      // var post = Posts.findOne({id: Session.get('id')});
       console.log('p1 post:', post);
       return post;
     }
@@ -56,6 +59,7 @@ if (Meteor.isClient) {
   Template.p2.helpers({
     post: function(){
       var post = Posts.findOne({id: location.pathname.replace(/\/p2\//g, '')});
+      // var post = Posts.findOne({id: Session.get('id')});
       console.log('p2 post:', post);
       return post;
     }
